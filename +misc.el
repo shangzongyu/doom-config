@@ -7,8 +7,12 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/OneDrive/PDMS/Notes")
 
+;;load sensitive data
+;; or (like spacemacs init.el)put the above variable into it ,then the own value separated from public config
+;; .emacs.secrets.el for example:
+
+;; lsp-mode
 (after! lsp-mode
   (setq lsp-enable-snippet t
         lsp-idle-delay 0.2)

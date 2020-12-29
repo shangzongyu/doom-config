@@ -38,3 +38,8 @@
 (add-hook 'org-mode-hook
           (lambda ()
             (org-superstar-mode 1)))
+
+(setq doom-theme 'doom-gruvbox)
+;; (setq doom-theme 'doom-gruvbox-light)
+
+(setq-default fill-column 120)

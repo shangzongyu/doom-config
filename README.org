@@ -3,17 +3,28 @@
 My Doom Emacs configuration
 
 ** Installation
-
 *** Install Emacs
 
+**** macOS
+
 #+begin_src sh
-brew tap railwaycat/emacsmacport
+brew install --cask xquartz
+brew tap d12frosted/emacs-plus
+brew install emacs-plus
+ln -s /usr/local/opt/emacs-plus/Emacs.app /Applications/Emacs.app
 #+end_src
 
-Then
+**** ubuntu
 
 #+begin_src sh
-brew install emacs-mac
+sudo add-apt-repository ppa:kelleyk/emacs
+sudo apt update
+sudo apt install emacs26
+
+# required dependencies
+sudo apt-get install git ripgrep
+# optional dependencies
+sudo apt-get install fd-find
 #+end_src
 
 *** Install Doom Emacs
@@ -28,3 +39,5 @@ git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
 #+begin_src sh
 git clone https://github.com/TimothyYe/doom-emacs.git ~/.doom.d
 #+end_src
+
+*** Doom install

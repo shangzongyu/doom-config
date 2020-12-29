@@ -4,28 +4,12 @@
 (load! "+ui")
 (load! "+misc")
 
-(setq doom-theme 'doom-gruvbox)
-;; (setq doom-theme 'doom-gruvbox-light)
-
-(after! org
-  (dolist (face '(org-level-1
-                  org-level-2 org-level-3
-                  org-level-4 org-level-5
-                  org-level-6 org-level-7
-                  org-level-8))
-    (set-face-attribute face nil :weight 'normal))
-  (setq org-superstar-headline-bullets-list '("◉" "○" "◈" "◇" "▣" "□"))
-)
-
-(setq-default fill-column 120)
-
 ;; https://github.com/syl20bnr/spacemacs/issues/2705
 ;; (setq tramp-mode nil)
 (setq tramp-ssh-controlmaster-options
     "-o ControlMaster=auto -o ControlPath='tramp.%%C' -o ControlPersist=no")
 
-(setq-default configuration-layer-elpa-archives
-    '(("melpa-cn" . "http://elpa.emacs-china.org/melpa/")
+(setq-default configuration-layer-elpa-archives '(("melpa-cn" . "http://elpa.emacs-china.org/melpa/")
       ("org-cn"   . "http://elpa.emacs-china.org/org/")
       ("gnu-cn"   . "http://elpa.emacs-china.org/gnu/")))
 
@@ -58,3 +42,17 @@
 ;; You can also try 'gd' (or 'C-c g d') to jump to their definition and see how
 ;; they are implemented.
 ;; (use-package! helm-spotify-plus)
+
+(after! org
+  (dolist (face '(org-level-1
+                  org-level-2 org-level-3
+                  org-level-4 org-level-5
+                  org-level-6 org-level-7
+                  org-level-8))
+    (set-face-attribute face nil :weight 'normal))
+
+  ;; (setq org-superstar-headline-bullets-list '("◉" "○" "◈" "◇" "▣" "□"))
+  (setq org-superstar-headline-bullets-list '("☰" "☷" "☯" "☭"))
+  ;;(setq org-superstar-headline-bullets-list '("◉" "○" "✸" "✿"))
+  ;;(setq org-ellipsis " ▼ ")
+)
